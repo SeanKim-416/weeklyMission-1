@@ -45,6 +45,20 @@ footer {
   display: inline-block;
   width: 1.25rem;
   height: 1.25rem;
+  background-position: center;
+  background-size: cover;
+}
+.sns-links > a:nth-child(1) {
+  background-image: url("../images/akar-icons_facebook-fill.svg");
+}
+.sns-links > a:nth-child(2) {
+  background-image: url("../images/akar-icons_twitter-fill.svg");
+}
+.sns-links > a:nth-child(3) {
+  background-image: url("../images/akar-icons_youtube-fill.svg");
+}
+.sns-links > a:nth-child(4) {
+  background-image: url("../images/ant-design_instagram-filled.svg");
 }
 .sns-links > svg {
   display: inline-block;
