@@ -1,0 +1,182 @@
+/* ======================= */
+/* section 공통 */
+/* ======================= */
+section {
+  background-color: #ffffff;
+  width: 100%;
+  width: 120rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* n번째 섹션들 세부 */
+section:nth-child(1) {
+  background-color: #f0f6ff;
+  flex-direction: column;
+  text-align: center;
+  height: 59.5625rem;
+  padding: 4.38rem 22.5rem 0;
+  gap: 2.5rem;
+}
+section:nth-child(2) {
+  height: 38.75rem;
+  padding: 7.5rem 28.8125rem 3.125rem;
+  gap: 9.81rem;
+}
+
+/* 3~5번째는 동일 사이즈*/
+section:nth-child(n + 3):nth-child(-n + 5) {
+  height: 34.375rem;
+  padding: 3.125rem 28.8125rem;
+  gap: 9.81rem;
+}
+
+/* ======================= */
+/* section 별 제목 */
+/* 첫번째 제외 나머지는 다 동일 양식 */
+/* ======================= */
+
+section:first-child .section-title {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 5rem;
+  height: 10rem;
+  width: 44.25rem;
+}
+section:nth-child(n + 2):nth-child(-n + 5) .section-title {
+  text-align: left;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.01875rem;
+}
+/* ======================= */
+/* 2-5번째 section 공통 */
+/* ======================= */
+/* 설명란 div 설정 */
+.description-container {
+  width: 18.1875rem;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  gap: 0.625rem;
+}
+
+/* description 텍스트 */
+.description-container > .description {
+  text-align: left;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 150%; /* 1.5rem */
+  color: #6b6b6b;
+}
+/* ======================= */
+/* section 세부 */
+/* ======================= */
+
+/* - 1번째 섹션 세부*/
+
+.addlink-btn {
+  /* style.css의 button 속성 상속 */
+  width: 21.875rem;
+}
+
+.section1-image {
+  padding: 3.13rem 2.56rem;
+  width: 75rem;
+  height: 36.875rem;
+  overflow: hidden;
+}
+.section1-image img {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 1.5625rem;
+  background: linear-gradient(
+    180deg,
+    rgba(196, 196, 196, 0) 67.68%,
+    #f0f6ff 94.76%
+  );
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
+}
+
+/* 2-5번째 섹션 세부 */
+
+/* 공통 사항 */
+section:nth-child(n + 2):nth-child(-n + 5) .description-image {
+  background-position: center;
+  background-size: cover;
+  flex-shrink: 0;
+}
+
+/* 2,3번째 이미지 담을 div */
+section:nth-child(n + 2):nth-child(-n + 3) .description-image {
+  width: 34.375rem;
+  height: 28.125rem;
+  border-radius: 0.9375rem;
+}
+section:nth-child(2) .description-image {
+  background-image: url("../images/section2_img1.png");
+}
+section:nth-child(3) .description-image {
+  background-image: url("../images/section2_img2.png");
+}
+/* 4번째 이미지 담을 div */
+section:nth-child(4) .description-image {
+  width: 35.625rem;
+  height: 29.3125rem;
+  background-image: url("../images/section2_img3.png");
+  border-radius: 1.5625rem;
+
+  box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.08);
+}
+/* 5번째 이미지 담을 div */
+section:nth-child(5) .description-image {
+  width: 34.375rem;
+  height: 28.125rem;
+  background-image: url("../images/section2_img4.png");
+  border-radius: 0.9375rem;
+}
+
+/* ======================= */
+/* 각 section 제목의 강조구간 그라데이션 효과 */
+/* ======================= */
+section:nth-child(1) .highlight {
+  background: linear-gradient(91deg, #6d6afe 17.28%, #ff9f9f 74.98%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+section:nth-child(2) .highlight {
+  background: linear-gradient(96deg, #fe8a8a 1.72%, #a4ceff 74.97%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+section:nth-child(3) .highlight {
+  background: linear-gradient(277deg, #6fbaff 59.22%, #ffd88b 93.66%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+section:nth-child(4) .highlight {
+  background: linear-gradient(
+    99deg,
+    #6d7ccd 19.76%,
+    rgba(82, 136, 133, 0.22) 52.69%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+section:nth-child(5) .highlight {
+  background: var(
+    --fandom-k-gra-blue-to-pink,
+    linear-gradient(271deg, #fe578f -9.84%, #68e8f9 107.18%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

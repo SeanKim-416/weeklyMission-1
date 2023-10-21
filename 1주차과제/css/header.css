@@ -1,0 +1,23 @@
+/* ================= */
+/* nav 설정 */
+/* ================= */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+.logo {
+  display: inline-block;
+  background-image: url("../images/logo.svg");
+  width: 8.3125rem;
+  height: 1.5rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.login-btn {
+  width: 8rem;
+  height: auto;
+}
